@@ -33,6 +33,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.19
         version: 18.2.19
+      next:
+        specifier: 14.0.5-canary.46
+        version: 14.0.5-canary.46(@babel/core@7.23.9)(react-dom@18.2.0)(react@18.2.0)
 
   .react-email:
     dependencies:
