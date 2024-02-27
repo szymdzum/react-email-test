@@ -1,88 +1,72 @@
 import * as React from "react";
+import { config } from "./components/config";
 import {
-  Html,
-  Body,
-  Container,
-  Head,
-  Row,
-  Column,
-  Preview,
   Section,
-  Text,
-  Heading
+  Text as DefaultText,
+  Heading,
+  Link,
+  Container,
+  Html,
+  Head,
+  Body,
+  Preview,
 } from "@react-email/components";
 import { Header } from "./components/header";
+import { Footer } from "./components/footer";
 
-export const Footer = () => (
-  <Section style={footer}>
-    <Container>
-      <Row>
-        <Column>
-          <Text>
-            This email was sent to you by BQUK. To ensure you receive our emails,
-            please add us to your address book.
-          </Text>
-        </Column>
-      </Row>
-    </Container>
-  </Section>
-);
+const Text = (props) => {
+  const globalStyles = {
+    fontSize: "1rem",
+  };
 
-export const Layout = ({ children }) => (
+  return <DefaultText style={{ ...globalStyles, ...props.style }}>{props.children}</DefaultText>
+};
+
+const AccountUnlock = () => (
   <Html>
     <Head />
-    <Preview>Your account is now unlocked</Preview>
-    <Body style={main}>
+    <Preview>Account Unlocked</Preview>
+    <Body style={canvas}>
       <Container style={container}>
         <Header />
-        {children}
+        <Section style={main}>
+          <Heading>Your account is now unlocked</Heading>
+          <Text>
+            Hello,
+          </Text>
+          <Text>
+            This is confirmation that your B&Q account is now unlocked.
+          </Text>
+          <Text>
+            If you didn't request for it to be unlocked and believe this email is in error,
+            please contact our customer services team on 0333 014 3098 666
+            or by using our
+            <Link href={config.url.contactForm}>{' '}online contact form</Link>.
+          </Text>
+          <Text>Best regards,</Text>
+          <Text>BQUK Customer Services</Text>
+        </Section>
         <Footer />
-      </Container>
-    </Body>
+        </Container>
+      </Body>
   </Html>
 );
 
-const AccountUnlock = () => (
-  <Layout>
-    <Section style={body}>
-      <Heading>Your account is now unlocked</Heading>
-      <Text>
-        We’re happy to let you know that your account is now unlocked and you
-        can access your account again.
-      </Text>
-      <Text>
-        If you have any questions or need help, please don’t hesitate to
-        contact us.
-      </Text>
-      <Text>Best regards,</Text>
-      <Text>BQUK Customer Services</Text>
-    </Section>
-  </Layout>
-);
-
-
-
 export default AccountUnlock;
 
-const main = {
+const canvas = {
   backgroundColor: "#E7E5E5",
-  fontFamily:
-    '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif',
+  fontFamily: config.fonts.primary,
 };
 
 const container = {
-  backgroundColor: "#ffffff",
-  margin: "0 auto",
-  padding: "20px 0 48px",
+  backgroundColor: config.colours.light,
+  marginInline: "auto",
 };
 
-const body = {
-  padding: "2rem",
+const main = {
+  padding: "2rem"
 };
 
-const footer = {
-  padding: "1rem 2rem",
-  backgroundColor: "#323c41",
-  color: "#ffffff",
-  fontSize: "12px",
-};
+
+

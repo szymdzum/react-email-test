@@ -1,22 +1,14 @@
-import {
-  Row,
-  Column,
-  Img,
-  Section,
-  Text,
-} from "@react-email/components";
-import * as React from "react";
+import React from "react";
+import { config } from "./config";
+import { Row, Column, Img, Section, Text, Link } from "@react-email/components";
 
 export const Header = () => (
   <Section style={header}>
     <Row>
       <Column>
-        <Img
-          src="/static/bquk_logo.jpeg"
-          alt="BQUK Logo"
-          width={48}
-          height={48}
-        />
+      <Link href={config.logo.href} target="_blank">
+        <Img src={config.logo.url} alt="B&Q" height={48} width={48} />
+      </Link>
       </Column>
       <Column align="right">
         <Text style={paragraph}>Customer services</Text>
@@ -29,15 +21,15 @@ export const Header = () => (
 export default Header;
 
 const header = {
-  backgroundColor: "#323c41",
   padding: "1rem 2rem",
-  color: "#ffffff",
+  backgroundColor: config.colours.dark,
+  color: config.colours.light,
 };
 
 const paragraph = {
   margin: "0",
   lineHeight: "1.5",
-  fontSize: "16px",
+  fontSize: "1rem",
 };
 
 const bold = {

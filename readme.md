@@ -31,3 +31,8 @@ Open [localhost:3000](http://localhost:3000) with your browser to see the result
 ## License
 
 MIT License
+
+## Tips, Tricks, and Gotchas
+
+Only content in files that are in root `emails` folder are auto-refreshed on save. <br/>
+Changes in nested folders are not. Example `emails/components/footer.tsx`
