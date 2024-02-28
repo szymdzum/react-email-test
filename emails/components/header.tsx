@@ -3,7 +3,7 @@ import { config } from "./config";
 import { Row, Column, Img, Section, Text, Link } from "@react-email/components";
 
 export const Header = () => (
-  <Section className="header" style={header}>
+  <Section style={header}>
     <Row>
       <Column>
       <Link href={config.logo.href} target="_blank">
