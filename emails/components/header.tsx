@@ -3,7 +3,7 @@ import { config } from "./config";
 import { Row, Column, Img, Section, Text, Link } from "@react-email/components";
 
 export const Header = () => (
-  <Section style={header}>
+  <Section className="header" style={header}>
     <Row>
       <Column>
       <Link href={config.logo.href} target="_blank">
@@ -21,9 +21,9 @@ export const Header = () => (
 export default Header;
 
 const header = {
-  padding: "1rem 2rem",
   backgroundColor: config.colours.dark,
   color: config.colours.light,
+  padding: "16px 32px",
 };
 
 const paragraph = {

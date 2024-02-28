@@ -37,7 +37,7 @@ export default Footer;
 
 const footer = {
   fontSize: "12px",
-  padding: "1rem 2rem",
+  padding: "16px 32px",
   backgroundColor: config.colours.dark,
   color: config.colours.light,
 };
