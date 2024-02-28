@@ -21,9 +21,9 @@ export const Header = () => (
 export default Header;
 
 const header = {
-  padding: "1rem 2rem",
   backgroundColor: config.colours.dark,
   color: config.colours.light,
+  padding: "16px 32px",
 };
 
 const paragraph = {

@@ -16,7 +16,7 @@ import { Footer } from "./components/footer";
 
 const Text = (props) => {
   const globalStyles = {
-    fontSize: "1rem",
+    fontSize: "16px",
   };
 
   return <DefaultText style={{ ...globalStyles, ...props.style }}>{props.children}</DefaultText>
@@ -24,8 +24,11 @@ const Text = (props) => {
 
 const AccountUnlock = () => (
   <Html>
-    <Head />
-    <Preview>Account Unlocked</Preview>
+    <Head>
+      <title>Account Unlocked</title>
+    </Head>
+    <Preview>Your account is now unlocked.</Preview>
+    
     <Body style={canvas}>
       <Container style={container}>
         <Header />
@@ -65,7 +68,7 @@ const container = {
 };
 
 const main = {
-  padding: "2rem"
+  padding: "32px"
 };
 
 
