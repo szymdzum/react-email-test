@@ -1,10 +1,10 @@
-# React Email Starter
 
-A live preview right in your browser.
+![kf-mail-bird](./emails/_assets/kf-mail-bird.png)
+
 
 ## Getting Started
 
-Use latest version of Node.js.
+Use [nvm](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/) to get the latest version of node.
 
 ```sh
 nvm install node
@@ -14,13 +14,13 @@ node -v
 v21.6.2
 ```
 
-Use pnpm to install dependencies.
+Use [pnpm](https://pnpm.io/installation) to install dependencies.
 
 ```sh
 pnpm install
 ```
 
-Then, run the development server:
+Run the development server.
 
 ```sh
 pnpm dev
@@ -28,11 +28,13 @@ pnpm dev
 
 Open [localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## License
+### Project Structure 
 
-MIT License
+TBD
 
-## Tips, Tricks, and Gotchas
+### Library Documentation
 
-Only content in files that are in root `emails` folder are auto-refreshed on save. <br/>
-Changes in nested folders are not. Example `emails/components/footer.tsx`
+[react-mail](https://react.email/docs/integrations/overview)
+
+
+

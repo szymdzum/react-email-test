@@ -14,6 +14,8 @@ import {
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
 
+import TestComp from "./_test/TestComp";
+
 const Text = (props) => {
   const globalStyles = {
     fontSize: "16px",
@@ -48,6 +50,8 @@ const AccountUnlock = () => (
           </Text>
           <Text>Best regards,</Text>
           <Text>BQUK Customer Services</Text>
+
+          <TestComp />
         </Section>
         <Footer />
         </Container>
